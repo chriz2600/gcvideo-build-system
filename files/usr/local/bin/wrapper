@@ -1,0 +1,9 @@
+#!/bin/bash -il
+
+PATH=$PATH:/root/zpugcc/toolchain/install/bin
+
+CMD="$1"
+shift
+
+cd /build
+$CMD "$@"

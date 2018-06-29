@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run --rm -it -v $(pwd):/build docker.i74.de:5000/gcvideo-build-system:latest /usr/local/bin/wrapper "$@"

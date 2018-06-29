@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+cd $(dirname $0)
+
+DOCKER_TARGET=docker.i74.de:5000
+IMAGE_NAME=gcvideo-build-system
+IMAGE_TAG=0.1
+
+docker build --rm -t ${DOCKER_TARGET}/${IMAGE_NAME}:${IMAGE_TAG} .
+docker tag ${DOCKER_TARGET}/${IMAGE_NAME}:${IMAGE_TAG} ${DOCKER_TARGET}/${IMAGE_NAME}:latest
+
+read -n1 -p "Do you want to push the image to the registry now [yN]? " answer
+if [[ "${answer:-n}" == "y" ]]
+then
+    docker push ${DOCKER_TARGET}/${IMAGE_NAME}:${IMAGE_TAG}
+    docker push ${DOCKER_TARGET}/${IMAGE_NAME}:latest
+fi

@@ -1,0 +1,6 @@
+#!/bin/bash -il
+
+cd /root/zpugcc/toolchain
+./fixperm.sh
+source env.sh
+bash ./build.sh
