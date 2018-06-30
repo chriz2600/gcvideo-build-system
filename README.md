@@ -97,4 +97,10 @@ gitlab-runner register \
     --tag-list="gcvideo" \
     --executor=docker $*
 ```
-See the [gcvideo .gitlab-ci.yml](https://github.com/chriz2600/gcvideo/blob/master/.gitlab-ci.yml) on how to use it.
+
+*References:*
+    
+- [gcvideo .gitlab-ci.yml](https://github.com/chriz2600/gcvideo/blob/master/.gitlab-ci.yml) on how to set up autobuilds.
+- [gcvideo pipelines](https://gitlab.com/chriz2600/gcvideo/pipelines) for automated builds.
+
+---
