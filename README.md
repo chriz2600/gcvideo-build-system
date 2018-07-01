@@ -3,6 +3,11 @@
 This should make it easier to build the gcvideo_dvi binaries needed for flashing from source.
 [Docker](https://www.docker.com/) is used to actually do this.
 
+Things to know for Windows users:
+
+- Docker for Windows runs on 64bit Windows 10 Pro, Enterprise and Education (1607 Anniversary Update, Build 14393 or later).
+- Docker requires Hyper-V to be enabled. After Hyper-V is enabled, VirtualBox no longer works, but any VirtualBox VM images remain.
+
 #### STEP 0
 
 Install [docker](https://docs.docker.com/install/).
