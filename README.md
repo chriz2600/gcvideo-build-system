@@ -76,7 +76,8 @@ To build gcvideo_dvi:
 
 - **Windows Power Shell:**
 
-    Setup git and install licence once:
+    Setup git and install licence once: 
+    <br>*For details on git and line endings, see this github article: [Dealing with line endings](https://help.github.com/articles/dealing-with-line-endings/)*
     ```
     # ensure proper line endings
     git config --global core.autocrlf false
