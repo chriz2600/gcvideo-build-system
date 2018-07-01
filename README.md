@@ -47,7 +47,7 @@ cd gcvideo-build-system
 
 To build gcvideo_dvi:
 
-- For Linux / MacOSX:
+- **Linux / MacOSX:**
     
     Install licence once:
     ```
@@ -55,16 +55,21 @@ To build gcvideo_dvi:
     mkdir -p $HOME/.Xilinx
     cp ~/Downloads/Xilinx.lic $HOME/.Xilinx/
     ```
+    Clone from github:
+    ```
+    git clone https://github.com/ikorb/gcvideo.git
+    ```
     Build:
     ```
+    cd gcvideo
     docker run --rm -it \
         -v $HOME/.Xilinx/Xilinx.lic:/root/.Xilinx/Xilinx.lic \
         -v $(pwd):/build \
         docker.i74.de:5000/gcvideo-build-system:latest \
-        /usr/local/bin/wrapper HDL/gcvideo_dvi/build-all.sh
+        /usr/local/bin/wrapper bash -c "cd HDL/gcvideo_dvi/ && ./build-all.sh"
     ```
 
-- For Windows Power Shell:
+- **Windows Power Shell:**
 
     Setup git and install licence once:
     ```
@@ -75,13 +80,18 @@ To build gcvideo_dvi:
     mkdir C:\.Xilinx
     cp ~\Downloads\Xilinx.lic C:\.Xilinx
     ```
+    Clone from github:
+    ```
+    git clone https://github.com/ikorb/gcvideo.git
+    ```
     Build:
     ```
+    cd gcvideo
     docker run -it --rm `
         -v C:\.Xilinx\Xilinx.lic:/root/.Xilinx/Xilinx.lic `
         -v ${pwd}:/build `
         docker.i74.de:5000/gcvideo-build-system:latest `
-        /usr/local/bin/wrapper HDL/gcvideo_dvi/build-all.sh
+        /usr/local/bin/wrapper bash -c "cd HDL/gcvideo_dvi/ && ./build-all.sh"
     ```
 
 #### STEP 3 optional autobuild setup
